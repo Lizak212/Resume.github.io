@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+  .acordian {
+    width: 300px;
+    background-color: white;
+    color: black;
+    border: solid black 5px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .acordian-item {
+    border: solid black 1px;
+    cursor: pointer;
+  }
+
+  .acordian-item:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .acordian-content {
+    display: none;
+  }
+</style>
+  
+</head>
+
+<body>
+  <div class = "acordian">
+    <div class = "acordian-item">
+      <h2>Personal Information</h2>
+
+      <div class = "acordian-content">
+        <p>Name: Elizabeth Khassanova</p>
+        <p>Phone Number: 905-541-8325</p>
+        <p>Email: Lizak2128506@gmail.com</p>
+        <p>Location: Hamilton, ON</p>
+      </div>
+    </div>
+
+    <div class = "acordian-item">
+      <h2>Skills</h2>
+
+      <div class = "acordian-content">
+        <p>Tutoring: 4 years</p>
+        <p>Coding: 3 years</p>
+      </div>
+    </div>
+
+    <div class = "acordian-item">
+      <h2>School Experience</h2>
+
+      <div class = "acordian-content">
+        <p>High School: Currently grade 12 </p>
+      </div>
+    </div>
+
+    <div class = "acordian-item">
+      <h2>Work Experience</h2>
+
+      <div class = "acordian-content">
+        <p>Mathnasium - Tutor: From 2020 to Present </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    var items = document.querySelectorAll(".acordian-item");
+
+    items.forEach (current => {
+      current.addEventListener("click", () => {
+        var content = current.querySelector(".acordian-content");
+        if (content.style.display == "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    });
+  </script>
+  
+</body>
+
+</html>
